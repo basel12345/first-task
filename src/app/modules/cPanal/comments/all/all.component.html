@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let res of Comments">
+      <th>{{res.nmae}}</th>
+      <td>{{res.email}}</td>
+      <td>{{res.body}}</td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="delete(res.postId, res.id)">delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

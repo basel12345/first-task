@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table">
+    <button type="button" class="btn btn-primary" routerLink='add'>Add</button>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let res of Comments">
+        <th>{{res.nmae}}</th>
+        <td>{{res.email}}</td>
+        <td>{{res.body}}</td>
+        <td>
+          <a  class="btn btn-secondary" [routerLink]="['edit/', res.id]">edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
