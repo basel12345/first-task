@@ -21,7 +21,7 @@ export class AllComponent implements OnInit {
 
  delete(id) {
   this.service.deletePost(id).subscribe(res => {
-    alert('ok');
+    console.log(res);
     this.service.getAllPosts().subscribe(data => {
       this.Posts = data;
     });

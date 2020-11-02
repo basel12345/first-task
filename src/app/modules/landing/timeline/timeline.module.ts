@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TimelineComponent } from './timeline.component';
@@ -18,7 +17,6 @@ const routes: Routes = [
     TimelineComponent
   ],
   imports: [
-    CommonModule,
     RouterModule.forChild(routes)
   ],
   providers: [PostsResolver],

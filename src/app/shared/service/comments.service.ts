@@ -18,7 +18,7 @@ export class CommentsService {
   }
 
   addComment(Comment) {
-    return this.http.put(`https://jsonplaceholder.typicode.com/comments`, Comment);
+    return this.http.post(`https://jsonplaceholder.typicode.com/comments`, Comment);
   }
 
   editComment(id, Comment) {
@@ -26,6 +26,6 @@ export class CommentsService {
   }
 
   deleteComment(postId, id) {
-    return this.http.delete(`https://jsonplaceholder.typicode.com/post/${postId}/comments/${id}`);
+    return this.http.delete(`https://jsonplaceholder.typicode.com/comments/${id}`);
   }
 }

@@ -1,12 +1,12 @@
 import { Component, DoCheck } from '@angular/core';
-import { AuthService } from './shared/service/auth.service';
+import { AuthService } from '../shared/service/auth.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'navbar-root',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class AppComponent implements DoCheck {
+export class NavbarComponent implements DoCheck {
   user: any;
   title = 'socialMedia';
   constructor(public authService: AuthService) {}

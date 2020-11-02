@@ -6,10 +6,8 @@ import { LocalStorageService } from "../Storage/localStorage.service";
 export class GuardService implements CanActivate {
   constructor(public service: LocalStorageService, public router: Router) {}
   canActivate(route: ActivatedRouteSnapshot): boolean {
-    const expectedRole = route.data.expectedRole;
-    const token = localStorage.getItem("token");
     const user = JSON.parse(localStorage.getItem("user"));
-    if (!token) {
+    if (!user) {
       this.router.navigate(["landing"]);
       return false;
     }

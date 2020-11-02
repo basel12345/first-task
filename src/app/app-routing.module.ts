@@ -12,11 +12,7 @@ const routes: Routes = [
   {
     path: 'cPanal',
     loadChildren: () => import('./modules/cPanal/cPanal.module').then((m) => m.CpanalModule),
-    // canActivate: [GuardService],
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./modules/login/login.module').then((m) => m.LoginModule),
+    canActivate: [GuardService],
   },
   { path: '**', redirectTo: 'landing' },
 ];

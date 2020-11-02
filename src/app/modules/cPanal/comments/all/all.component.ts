@@ -20,7 +20,7 @@ export class AllComponent implements OnInit {
 
  delete(postId, id) {
   this.service.deleteComment(postId, id).subscribe(res => {
-    alert('ok');
+    console.log(res);
     this.service.getAllComments().subscribe(data => {
       this.Comments = data;
     });
